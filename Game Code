@@ -1,3 +1,7 @@
+# It repeatedly asks the player for a criteria choice, compares the chosen criteria for the player's card and the computer's card.
+# It awards points accordingly, and keeps track of the scores. 
+# The game continues until either the player or the computer reaches a score of 12, and the winner is determined.
+
 import random
 
 print(" ______________________________ ")
