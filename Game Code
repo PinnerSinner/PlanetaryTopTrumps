@@ -17,3 +17,14 @@ planets.append(["Uranus",2872.5,51118,30589,27])
 planets.append(["Neptune",4495.1,49528,59800,14])
 planets.append(["Pluto",5906.4,2370,90560,5])
 
+print("Your Card:")
+cardNumber = random.randint(0,len(planets)-1)
+print("---> Planet: " + planets[cardNumber][0])
+print("---> Distance from the Sun: " + str(planets[cardNumber][1])+ " million km.")
+print("---> Diameter: " + str(planets[cardNumber][2])+ " km.")
+print("---> Orbital Period: " + str(planets[cardNumber][3])+ " days.")
+print("---> Number of Moons: " + str(planets[cardNumber][4]))
+
+player_score = 0
+computer_score = 0
+
