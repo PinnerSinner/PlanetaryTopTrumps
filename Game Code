@@ -59,5 +59,25 @@ while player_score < 12 and computer_score < 12:
     # Compare the chosen criteria
     player_value = planets[cardNumber][player_choice]
     computer_value = planets[computer_card_number][player_choice]
+  if player_value > computer_value:
+        print("You win this round!")
+        player_score += 3
+    elif player_value < computer_value:
+        print("Computer wins this round!")
+        computer_score += 3
+    else:
+        print("It's a draw! No points awarded.")
+
+    # Display scores
+    print("\nPlayer's Score: " + str(player_score))
+    print("Computer's Score: " + str(computer_score))
+
+# Determine the winner
+if player_score >= 12:
+    print("\nWaheyyyyy! You are the ruler of the galaxy!")
+else:
+    print("\nYou have been bested, bringing dishonour to the cosmos. Better luck next time!")
+
+
 
   
