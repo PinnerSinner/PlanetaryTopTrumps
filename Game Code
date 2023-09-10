@@ -28,3 +28,36 @@ print("---> Number of Moons: " + str(planets[cardNumber][4]))
 player_score = 0
 computer_score = 0
 
+while player_score < 12 and computer_score < 12:
+    print("\nComputer's Card:")
+    computer_card_number = random.randint(0, len(planets) - 1)
+
+    # Ask the player for the criteria to compare
+    print("\nChoose a criteria to compare:")
+    print("1 - Distance from the Sun")
+    print("2 - Size (Diameter)")
+    print("3 - Orbital Period")
+    print("4 - Number of Moons")
+    
+    player_choice = input("Enter your choice (1/2/3/4): ")
+
+    # Ensure the player's choice is valid
+    if player_choice not in ["1", "2", "3", "4"]:
+        print("Invalid choice. Please select a valid option.")
+        continue
+
+    player_choice = int(player_choice) - 1  # Adjust for 0-based indexing
+
+    # Display the computer's card information
+    print("\nComputer's Card:")
+    print("---> Planet: " + planets[computer_card_number][0])
+    print("---> Distance from the Sun: " + str(planets[computer_card_number][1]) + " million km.")
+    print("---> Diameter: " + str(planets[computer_card_number][2]) + " km.")
+    print("---> Orbital Period: " + str(planets[computer_card_number][3]) + " days.")
+    print("---> Number of Moons: " + str(planets[computer_card_number][4]))
+
+    # Compare the chosen criteria
+    player_value = planets[cardNumber][player_choice]
+    computer_value = planets[computer_card_number][player_choice]
+
+  
